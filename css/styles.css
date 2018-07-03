@@ -70,39 +70,35 @@ h1{
 #gradient-purple{
     position: absolute;
     top:0%;
-    opacity: 0.8;
-    z-index: -1; 
+    z-index: 0; 
     filter: blur(100px);
-    animation: 8s fadeIn infinite;
-}
+    animation: 8s fadeInPurple infinite;}
 #gradient-blue{
     position: absolute;
     top:0%;
-    opacity: 0.8;
-    z-index: -1; 
+    z-index: 0; 
     filter: blur(140px);
-    animation: 8s fadeInBlue infinite;
+    animation: 5s fadeInBlue infinite;
 }
-@keyframes fadeIn {
+@keyframes fadeInPurple {
     0% {
         opacity: 0;
-        left: -10%;
-	}
-
-	50% {
-        opacity: 0.3;
+        left: 10%;
+    }
+    50% {
+        opacity: 0.4;
         left: 0%;
 	}
-
-    100% {
-        opacity: 0;
-        left:-30%;
+	100% {
+        opacity: 0.1;
+        left: 10%;
 	}
+
 }
 @keyframes fadeInBlue {
     0% {
         opacity: 0;
-        right: -10%;
+        right: 5%;
 	}
 
 	50% {
@@ -112,7 +108,7 @@ h1{
 
     100% {
         opacity: 0;
-        right: -30%;
+        right: 30%;
 	}
 }
 #particles{
@@ -146,7 +142,7 @@ h1{
     z-index: 50; 
 }
 
-#welcome{
+#slogan{
     margin-top:60px !important;
     font-size: 20px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -199,7 +195,7 @@ h1{
 .slide{
     position: absolute;
 }
-.slide.active{
+.slide.activate{
     margin: 0 !important;
     padding: 0 !important;
 }

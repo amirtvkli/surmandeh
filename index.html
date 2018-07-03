@@ -12,80 +12,111 @@
     <link rel="icon" type="image/png" href="img/favicon.png" />
     
     <!-- Links -->
-    <link rel="stylesheet" type="text/css" media="screen" href="semantic/semantic.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>          <!-- Jquery -->
+    <script type="text/javascript"  src="js/script.js"></script>                    <!-- Page Scripts -->
+    
+    <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="fonts/icomoon.css"  />
     <link rel="stylesheet" type="text/css" href="fonts/vazir.css"  />
-
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
+    
+    <!-- Semantic UI-->
+    <link rel="stylesheet" type="text/css" media="screen" href="semantic/semantic.css" />
     <script src="js/semantic.min.js"></script>
-    <script src="js/script.js"></script>
+    
+    <!-- Slider -->
+    <script type="text/javascript" src="js/slider.js"></script>
+
+    <!-- FullPage Js (https://github.com/alvarotrigo/fullPage.js#usage) -->  
+    <link rel="stylesheet" type="text/css" href="fullpage/fullpage.css" />
+    <script type="text/javascript"  src="fullpage/fullpage.js"></script>            
+    <script src="vendors/easings.min.js"></script>                                  <!-- Easing -->
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>    <!-- Scroll Over Flow -->
+    
+
+    <!-- Partilces-->
     <script src="js/particle-engine.js"></script>
+    
+    
+    
 </head>
 <body>
-    <div id="gradient-purple">
-        <img src="img/gradient.png">
-    </div>
-    <div id="gradient-blue">
-        <img src="img/gradient-blue.png">
-    </div>
-    <div id="menu" class="ui container">
-        <div class="ui secondary menu">
-            <a class="item">
-                باشگاه مشتریان بارشیک 
-                <i class="icon-client"></i>
-            </a>
-            <a class="item">
-                ورود
-                <i class="icon-signin"></i>
-                <!-- <img class="menu-icon" src="img/icons/icon-signin.svg"> -->
-            </a>
-            <div class="right item">
-                <i class="icon-menu" style="padding-left:0px !important;"></i>
+    <div id="fullpage">
+        <div class="section">
+            
+            <div id="menu" class="ui container">
+                <div class="ui secondary menu">
+                    <a class="item">
+                        باشگاه مشتریان بارشیک 
+                        <i class="icon-client"></i>
+                    </a>
+                    <a class="item">
+                        ورود
+                        <i class="icon-signin"></i>
+                        <!-- <img class="menu-icon" src="img/icons/icon-signin.svg"> -->
+                    </a>
+                    <div class="right item">
+                        <i class="icon-menu" style="padding-left:0px !important;"></i>
+                    </div>
+                </div>
+            </div>
+            <canvas id="canvas">
+               
+            </canvas>
+             <div id="gradient-purple">
+                    <img src="img/gradient.png">
+                </div>
+                <div id="gradient-blue">
+                    <img src="img/gradient-blue.png">
+                </div>
+            <div id="logo">
+                <img src="img/logo.png" >
+                <p id="slogan">به شهر زیبایی پریوار خوش آمدید.</p>
+            </div>
+            <div id="line-bottom">
+                <img src="img/line-bottom.png" alt="">
+            </div>
+            <div id="logo-back">
+                <img src="img/logo-back.png">
+            </div>
+            <div class="carousel">
+                <div id="prev"><i class="icon-angle-left"></i></div>
+                <div id="slider">
+                    <div class="slide activate">
+                        <div class="slide-copy">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        <img class="mask" src="img/slide1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <div class="slide-copy">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        <img class="mask" src="img/slide2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <div class="slide-copy">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        <img class="mask" src="img/slide3.jpg" alt="">
+                    </div>
+                </div>
+                
+                <div id="next"><i class="icon-angle-right"></i></div>
             </div>
         </div>
-    </div>
-    <canvas id="canvas">
-    </canvas>
-    <div id="logo">
-        <img src="img/logo.png" >
-        <p id="welcome">به شهر زیبایی پریوار خوش آمدید.</p>
-    </div>
-    <div id="line-bottom">
-        <img src="img/line-bottom.png" alt="">
-    </div>
-    <div id="logo-back">
-        <img src="img/logo-back.png">
-    </div>
-    <div class="carousel">
-        <div id="prev"><i class="icon-angle-left"></i></div>
-        <div id="slider">
-            <div class="slide active">
-                <div class="slide-copy">
-                    <h2></h2>
-                    <p></p>
-                </div>
-                <img class="mask" src="img/slide1.jpg" alt="">
-            </div>
-            <div class="slide">
-                <div class="slide-copy">
-                    <h2></h2>
-                    <p></p>
-                </div>
-                <img class="mask" src="img/slide2.jpg" alt="">
-            </div>
-            <div class="slide">
-                <div class="slide-copy">
-                    <h2></h2>
-                    <p></p>
-                </div>
-                <img class="mask" src="img/slide3.jpg" alt="">
-            </div>
+        <div  class="section">
+            Section B
         </div>
-        
-        <div id="next"><i class="icon-angle-right"></i></div>
+        <div class="section">
+            Section C
+        </div>
+        <div class="section">
+            Section D
+        </div>
     </div>
-    
 </body>
 </html>

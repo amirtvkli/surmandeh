@@ -61,7 +61,7 @@ $(document).ready(function() {
     
     //Custom selectors
     sectionSelector: '.section',
-    slideSelector: '.slide',
+    slideSelector: '.page',
     
     lazyLoading: false,
     
