@@ -1,4 +1,9 @@
-  i {
+body{
+    background-color: rgb(254, 254, 254);
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+}
+i {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-size: 17px;
     padding-left: 7px;
@@ -25,11 +30,7 @@
     content: "\e902";
   }
   
-body{
-    background-color: rgb(254, 254, 254);
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+
 
 *{
     font-family: 'Vazir';
