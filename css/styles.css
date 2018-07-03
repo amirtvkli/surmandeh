@@ -32,7 +32,7 @@ body{
 }
 
 *{
-    font-family: 'vazir light';
+    font-family: 'Vazir';
     font-size:12px;
 }
 h1{
@@ -130,7 +130,7 @@ h1{
     z-index: -3; 
 }
 
-  #canvas{
+#canvas{
     position: absolute;
  right:60%;
  bottom:35%;
@@ -217,6 +217,9 @@ h1{
     bottom:6%;
     opacity: 0.1;
     color: black;
+}
+.icon-angle-left, .icon-angle-right{
+font-size: 12px;
 }
 
 #prev{
