@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>شهر زیبایی پریوار</title>
+    <title>محصولات آرد و نان سورمنده | Surmandeh</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   
     
@@ -26,14 +26,15 @@
     
     <!-- Slider -->
     <script type="text/javascript" src="js/slider.js"></script>
-
+    
     <!-- FullPage Js (https://github.com/alvarotrigo/fullPage.js#usage) -->  
     <link rel="stylesheet" type="text/css" href="fullpage/fullpage.css" />
-    <script type="text/javascript"  src="fullpage/fullpage.js"></script>            
+    <script type="text/javascript"  src="fullpage/fullpage.js"></script>  
+    <script type="text/javascript"  src="js/fullpage.js"></script>  
     <script src="vendors/easings.min.js"></script>                                  <!-- Easing -->
     <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>    <!-- Scroll Over Flow -->
     
-
+    
     <!-- Partilces-->
     <script src="js/particle-engine.js"></script>
     
@@ -42,45 +43,64 @@
 </head>
 <body>
     <div id="fullpage">
+        <div id="footer">
+            <i  class="icon-vista"></i>
+            <p id="vista">طراحی و اجرا توسط
+                <a href="http://barshic.com">
+                    استودیو ویستا  
+                </a>
+            </p>
+            <i class="icon-info"></i>
+            <p id="signature">تمامی حقوق مادی و معنوی برای 
+                <a href="http://surmandeh.com">
+                    شرکت طبیعت طعم غلات  
+                </a>
+                محفوظ می باشد.
+            </p>
+            <i id="prev" class="icon-angle-left"></i>
+            <i id="next" class="icon-angle-right"></i>
+        </div>
+        
         <div class="section">
+            <div id="line"></div>
+            <div id="title-box">
+                <div id="logo">
+                    <img  src="img/logo.png" >
+                </div>
+                <div id="slogan">
+                    <p >به تارنمای محصولات آرد و نان بومی سورمنده خوش آمدید.</p>
+                </div>
+                
+                <nav id="menu" class="ui labeled icon secondary menu">
+                    <a href="#intro" class="item">
+                        <img src="img/menu/company.png">
+                        درباره سورمنده
+                    </a>
+                    <a href="#products" class="item">
+                        <img src="img/menu/products.png">
+                        محصولات
+                    </a>
+                    <a href="pages/gallery.html" class="item">
+                        <img src="img/menu/gallery.png">
+                        گالری تصاویر
+                    </a>
+                    <a href="catalog/Catalog.pdf" class="item">
+                        <img src="img/menu/catalog.png">
+                        دفترچه محصولات
+                    </a>
+                    <a href="#contact" class="item">
+                        <img src="img/menu/sketchs.png">
+                        تماس با ما
+                    </a>
+                </nav>
+            </div>
             
-            <div id="menu" class="ui container">
-                <div class="ui secondary menu">
-                    <a class="item">
-                        باشگاه مشتریان بارشیک 
-                        <i class="icon-client"></i>
-                    </a>
-                    <a class="item">
-                        ورود
-                        <i class="icon-signin"></i>
-                        <!-- <img class="menu-icon" src="img/icons/icon-signin.svg"> -->
-                    </a>
-                    <div class="right item">
-                        <i class="icon-menu" style="padding-left:0px !important;"></i>
-                    </div>
-                </div>
-            </div>
-            <canvas id="canvas">
-               
-            </canvas>
-             <div id="gradient-purple">
-                    <img src="img/gradient.png">
-                </div>
-                <div id="gradient-blue">
-                    <img src="img/gradient-blue.png">
-                </div>
-            <div id="logo">
-                <img src="img/logo.png" >
-                <p id="slogan">به شهر زیبایی پریوار خوش آمدید.</p>
-            </div>
-            <div id="line-bottom">
-                <img src="img/line-bottom.png" alt="">
-            </div>
+            
             <div id="logo-back">
                 <img src="img/logo-back.png">
             </div>
             <div class="carousel">
-                <div id="prev"><i class="icon-angle-left"></i></div>
+                
                 <div id="slider">
                     <div class="slide activate">
                         <div class="slide-copy">
@@ -103,19 +123,154 @@
                         </div>
                         <img class="mask" src="img/slide3.jpg" alt="">
                     </div>
+                    <div class="slide">
+                        <div class="slide-copy">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        <img class="mask" src="img/slide4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <div class="slide-copy">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        <img class="mask" src="img/slide5.jpg" alt="">
+                    </div>
                 </div>
                 
-                <div id="next"><i class="icon-angle-right"></i></div>
+                
             </div>
         </div>
-        <div  class="section">
-            Section B
+        <div class="section intro">
+            <div id="about" class="ui center aligned vertical aligned grid">
+                <img  src="img/logo.png">
+                
+                <div class="ui main container header">
+                    درباره سورمنده
+                </div>
+                <div class="text">
+                    کارخانه سورمنده توسط شرکت طبیعت طعم غلات در سال ۱۳۹۶ در شهرک صنعتی ده‌سرخ تاسیس شده است.
+                    علت نام‌گذاری نام سورمنده، دشت‌های گندم، جو و چندغله منطقه سورمنده در شهر اصفهان می باشد. غله تولیدی این منطقه  از فراوانی و کیفیت بسیار بالایی برخوردار است؛ به‌گونه‌‌ای که آرد و نان فرآوری شده از آن، کیفیتی متمایز دارد.
+                    آرد کامل گندم، آرد کامل جو، آرد چند غله، عمده محصولات این کارخانه می‌باشند.
+                    به‌کارگیری تجهیزات و ماشین‌آلات مدرن یکی از مزیت‌های اساسی این کارخانه می باشد که موجب شده است فرآیندهای مختلف تولیدی، تمیز و به‌سرعت انجام شوند.
+                </div>
+            </div>
         </div>
-        <div class="section">
-            Section C
+        <div class="section products">
+                <div class="page" data-anchor="page1">
+                        <div class="ui two column centered grid">
+                                <div class="three column centered row product">
+                                    <div class="column image">
+                                        <a target="_blank" href="img/products/grain-products.jpg">
+                                            <img src="img/products/grain-products.jpg" alt="Wheat" height="400" >
+                                        </a>
+                                    </div>
+                                    <div class="column caption">
+                                        <div class="desc header">آرد کامل گندم</div>
+                                        <div class="desc pros">مناسب پخت انواع بیسکوئیت، کلوچه، حلوا، سمنو و نان سبوس دار</div>
+                                        <div class="desc extra">
+                                            گندم یکی از اولین و گسترده‌ترین محصولات کشاورزی است که به عنوان منبع اصلی تامین کالری و پروتئین انسان در کشورهای مختلف به خصوص در کشورهای در حال توسعه شناخته شده است.
+                                            ارزش غذایی بالا، هضم آسان، تنوع و مرغوبیت فراورده‌های آن، سهولت تبدیل و نگه‌داری، آن را در بین سایر غلات متمایز کرده است. دانه
+                                            گندم شامل سه قسمت اصلی اندوسپرم، جوانه و سبوس  می‌باشد. جوانه از نظر رویش مجدد دانه گندم نقش مهمی دارد، پوسته دارای لایه‌های متعددی است که ترکیب شیمیایی و ارزش تغذیه‌ای آن‌ها متفاوت است. مغز دانه نیز محتوی نشاسته است که به علت متفاوت بودن ترکیبات قسمت‌های مختلف آن کاربردهای صنعتی و تغذیه‌ای گوناگونی دارد. 
+                                            
+                                        </div>
+                                        
+                                        <ul class="desc extra">
+                                            مزایای استفاده:
+                                            <li>کاهش کلسترول مضر خون </li>
+                                            <li> کاهش سرعت جذب قند و کاهش ابتلا به‌ دیابت</li>
+                                            <li>   سرشار از فیبر و‌ ایده آل برای رژیم‌های غذایی و سلامت دستگاه‌گوارش</li>
+                                            <li>  حاوی عناصر معدنی و ویتامین های ‌B</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                     </div>
+                <div class="page" data-anchor="page2"> 
+                        <div class="ui two column centered grid">
+                                <div class="three column centered row product">
+                                    
+                                    <div class="column caption">
+                                        <div class="desc header">آرد کامل جو</div>
+                                        <div class="desc pros">مناسب پخت انواع بیسکوئیت، کلوچه و نـــــان‌ سبــــــــــوس دار</div>
+                                        <div class="desc extra">
+                                            گیاه جو از اولین غله‌هایی است که انسان کشت می‌کرده و تا چند صد سال پیش غله منحصر به فرد شمرده می¬شد که بعدها گندم جایگزین آن شد. گیاه جو در ایران دومین غله پس از گندم است که تقریبا از نظر تولیدی در رده چهاردهم دنیا قرار دارد.  خاستگاه واقعی جو هنوز ناشناخته است. اما بسیاری از محققین، خاستگاه این گیاه را کوه‌های زاگرس در غرب ایران، آناتولی جنوبی و فلسطین می‌دانند. 
+                                            
+                                        </div>
+                                        
+                                        <ul class="desc extra">مزایای استفاده:
+                                            <li>تسهیل هضم و متعادل سازی باکتری های مفید در دستگاه گوارش </li>
+                                            <li> کمک به کاهش وزن و محدود سازی میل به غذا </li>
+                                            <li>  کاهش ریسک ابتلا به سنگ کلیه</li>
+                                            <li>   افزایش الاستیسیته پوست و محافظت از آن در مقابل رادیکالهای آزاد </li>
+                                            <li>کاهش تحریک پذیری ریه در بیماری آسم </li>
+                                            <li>کاهش ریسک بیماری های قلبی- عروقی</li>
+                                            <li>منبعی مناسب از آنتی اکسیدان، مواد معدنی و ویتامین های ضروری</li>
+                                            <li>کمک به کنترل بیماری دیابت نوع دو و دیابت بارداری</li>
+                                            <li>تقویت سیستم ایمنی بدن (حاوی بتا گلوکان)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="column image">
+                                        <a target="_blank" href="img/products/barley-products.jpg">
+                                            <img src="img/products/barley-products.jpg" alt="Wheat" height="400" >
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+         
         </div>
-        <div class="section">
-            Section D
+        <div class="section contact">
+            <section class="ui grid map">
+                <iframe src="http://maps.google.com/maps?q=32.4015201,51.7035658&z=16&output=embed&key=AIzaSyCxitB5jQcw7weQdg9MqBRfxr6mj81wT7I"   
+                width="100%" height="280" frameborder="0" style="border:0" allowfullscreen frameborder="0" style="border:0"></iframe>
+                
+            </section>
+            <section class="ui container">
+                <div class="ui center aligned grid">
+                    <div class="one column row">
+                        <img src="img/logo.png" alt="Surmandeh" height="90px">
+                    </div>
+                    <div class="one column row footer-menu">
+                        <p class="mbr-text align-right links mbr-fonts-style display-7">
+                            <a href="#welcome" class="text-black">خانه</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            <a href="#intro" class="text-black">درباره سورمنده</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            <a href="#gallery" class="text-black">گالری تصاویر</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            <a href="#products" class="text-black">محصولات</a>
+                        </p>
+                    </div>
+                    <div class="one column row breaker">
+                        <hr style="width: 100%; opacity: 0.2;">
+                    </div>
+                    
+                    <div id="address" class="one column row">
+                        <p>
+                            نشانی کارخانه: اصفهان، ناحیه صنعتی ده‌سرخ (مهرگان)، خیابان هشتم، پلاک 72، شرکت طبیعت‌طعم‌غلات
+                            <br>
+                            شماره‌های تماس:
+                            1919	3030	091،
+                            6363	3030	091،
+                            
+                            7575	3030	‍091
+                        </p>
+                    </div>
+                    
+                    <div class="one column row" id="signature">
+                        <p >
+                            تمامی حقوق مادی و معنوی برای 
+                            <a href="http://surmandeh.com">
+                                شرکت طبیعت طعم غلات  
+                            </a>
+                            محفوظ می‌باشد.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+            
         </div>
     </div>
 </body>

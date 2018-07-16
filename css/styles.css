@@ -2,148 +2,150 @@ body{
     background-color: rgb(254, 254, 254);
     /* overflow-x: hidden;
     overflow-y: hidden; */
+    overflow-x: hidden !important;
 }
+#line{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 230, 0);
+    z-index: 100;
+}
+
 i {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-size: 17px;
     padding-left: 7px;
     font-family: 'parivar' !important;
-    speak: none;
+    speak-as: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+    
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-menu:before {
-    content: "\e901";
-  }
-  .icon-client:before {
-    content: "\e900";
-  }
-  .icon-signin:before {
-    content: "\e902";
-  }
-  
+}
 
 
 *{
-    font-family: 'Vazir';
+    font-family: 'Vazir' !important;
     font-size:12px;
 }
 h1{
     text-align:center;
 }
-#menu {
-    margin-top:5px; 
-    padding: 0px 20px; 
+
+/* footer signature */
+#footer {
+    display: flex;
     position: absolute;
+    font-family: 'Vazir-FD';
+    font-size: 11px !important;
+    font-weight: 300;
+    z-index: 300;
+    bottom:3.5%;
+    left: 2%;
+    color: rgb(235, 235, 235);
+}
+#footer i{
+    font-size: 13px !important;
+    margin: 0 3px;
+}
+
+#footer p,a{
+    direction: rtl !important;
+    color: rgb(0, 0, 0) !important;
+}
+#footer a:hover{
+    font-weight: bold;
+}
+#vista{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    width:0;
+}
+#vista:hover{
     width: 100%;
+}
+.icon-vista:hover + #vista{
     color:black;
-    z-index: 200;
+    animation: scale 1s ease-in;
+    animation-fill-mode: forwards;
+    transition-delay: 2s;
 }
-.menu.secondary .item{
-    color: rgb(88, 88, 88) !important;
-    
+#signature{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    width:0;
 }
-.menu.secondary .item:hover{
-    background-color: transparent !important;
-    color: black !important;
-    
+#signature:hover{
+    width:100%;
 }
-.menu-icon{
-    fill: red !important;
+.icon-angle-left,.icon-angle-right,.icon-info,.icon-vista{
+    cursor: pointer;
+}
+.icon-angle-left:hover{
+    color:black;
+}
+.icon-angle-right:hover{
+    color:black;
+}
+.icon-vista:hover{
+    color:black;
+}
+.icon-info:hover{
+    color:black;
+}
+.icon-info:hover + #signature{
+    animation: 
+    scale 1s ease-in;
+    animation-fill-mode: forwards; 
+    transition-delay: 2s;
+}
+@keyframes scale {
+    0% {width: 0}
+    from { width: 0 }
+    to { width: 100% }
+    100% {width: 100% }
+}
+
+
+
+/* title box */
+#title-box{
+    direction: rtl;
+    z-index: 150;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-flow: column;
+    justify-content:space-between;
+    align-items: flex-end;
 }
 #logo{
-    float: left;
-    direction: rtl;
-    position: absolute;
-    top:32%;
-    right: 15%;
-    
-}
-#gradient-purple{
-    position: absolute;
-    top:0%;
-    z-index: 0; 
-    filter: blur(100px);
-    animation: 8s fadeInPurple infinite;}
-#gradient-blue{
-    position: absolute;
-    top:0%;
-    z-index: 0; 
-    filter: blur(140px);
-    animation: 5s fadeInBlue infinite;
-}
-@keyframes fadeInPurple {
-    0% {
-        opacity: 0;
-        left: 10%;
-    }
-    50% {
-        opacity: 0.4;
-        left: 0%;
-	}
-	100% {
-        opacity: 0.1;
-        left: 10%;
-	}
-
-}
-@keyframes fadeInBlue {
-    0% {
-        opacity: 0;
-        right: 5%;
-	}
-
-	50% {
-        opacity: 0.2;
-        right: 0%;
-	}
-
-    100% {
-        opacity: 0;
-        right: 30%;
-	}
-}
-#particles{
-    position: absolute;
-    top:30%;
-    opacity: 0.4;
-    left: 0%;
-    z-index: -1; 
-    filter: blur(3px);
-}
-#logo-back{
-    position: absolute;
-    bottom:0%;
-    right: 0%;
-    filter: blur(2px);
-    z-index: -3; 
-}
-
-#canvas{
-    position: absolute;
- right:60%;
- bottom:35%;
- opacity:1;
-
-  }
-#line-bottom{
-    position: absolute;
-    height: 13px;
-    bottom:0%;
-    left: 20%;
-    z-index: 50; 
+    display: flex;
+    align-items: flex-end;
+    align-self:center;
+    justify-items: center;
+    flex: 0.6 auto;
+    margin: 0 auto;
 }
 
 #slogan{
-    margin-top:60px !important;
+    display: flex;
+    align-items: center;
+    align-self:center;
+    flex: 0.3 auto;
+    justify-items: center;
+}
+#slogan p{
+    color: rgb(73, 73, 73);
     font-size: 20px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-left: .15em solid rgb(255, 217, 0);
@@ -164,22 +166,72 @@ h1{
     from, to { border-color: transparent }
     50% { border-color: rgb(255, 217, 0) }
 }
+
+
+/* menu */
+#menu {
+    align-self:center;
+    display: flex;
+    align-items: flex-start !important;
+    flex: 1;
+    direction: rtl;
+    float:right;
+    color:black;
+    z-index: 200;
+}
+
+.menu.secondary .item{
+    opacity: 0.7;
+}
+.menu.secondary .item img{
+    width: 65px !important;
+    margin-bottom: 10px !important;
+}
+
+.menu.secondary .item:hover{
+    margin-bottom:12px !important; 
+    background-color: transparent !important;
+    opacity: 1;
+}
+
+
+
+#logo-back{
+    position: absolute;
+    bottom:-5%;
+    right: 5%;
+    z-index: -3; 
+}
+
+#canvas{
+    position: absolute;
+    right:50%;
+    bottom:35%;
+    filter: blur(2px);
+}
+#line-bottom{
+    position: absolute;
+    height: 13px;
+    bottom:0%;
+    left: 20%;
+    z-index: 50; 
+}
+
+
+/* carousel */
 .mask{
-    -webkit-mask-image: url(http://studiovista.ir/static/folio/parivar/img/logoMask.svg);
-    -webkit-mask-mode: alpha;
+    -webkit-mask-image: url(c://Data/Develop/Surmande/img/logoMask.png);
+    -webkit-mask-mode: match-source;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size:  auto 100%;
-    -webkit-mask-position-x: 210px;
+    -webkit-mask-size:  85%;
     
-    mask-image: url(http://studiovista.ir/static/folio/parivar/img/logoMask.svg);
-    mask-mode: alpha;
+    mask-image: url(c://Data/Develop/Surmande/img/logoMask.png);
+    mask-mode: match-source;
     mask-repeat: no-repeat;
-    mask-size:  auto 100%;
-    mask-position: 210px;
+    mask-size:  90%;
 }
 .carousel{
     width:100%;
-    height:100vh;
 }
 #slider{
     overflow: hidden;
@@ -188,9 +240,8 @@ h1{
     left:bottom;
 }
 #slider img{
-    width:100%;
-    height:100vh;
-    
+    height:100%;
+    width: 100%;
 }
 .slide{
     position: absolute;
@@ -205,32 +256,209 @@ h1{
     left:0;
     background: transparent;
 }
-#prev,#next{
-    float:left;
-    cursor:pointer;
+
+
+
+/* intro */
+.intro{
+    display: flex !important;
+    flex-direction: column !important;
+    direction: rtl;
+    width: 100%;
+    height: 100%;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    background: no-repeat left top url(../img/about.jpg);
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-bottom: rgb(255, 208, 0) 2px solid;
+    border-top: rgb(255, 17, 0) 2px solid;
+}
+#about{
+    /* color: white; */
+    background-color: white;
+    width: 60%;
+    text-align: justify;
+    height: 400px;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    align-self: center !important;
+    justify-self: center !important;
+    margin: auto;
+    padding:60px;
+    border-radius: 20px;
+}
+#about .header{
+    /* color: white !important; */
+    text-align: center !important;
+    font-size: 20px;
+}
+#about .text{
+    font-size: 15px;
+}
+#about img{
     position: absolute;
-    z-index:100;
-    margin-left: 30px;
-    bottom:6%;
-    opacity: 0.1;
+    top:calc(50% - 250px);
+    right: auto;
+    text-align: center !important;
+    width: 200px;
+}
+
+/* products */
+.products{
+    min-height: 1050px !important; 
+    padding-top:50px !important; 
+}
+
+.product {
+    margin:30px auto;
+    /* border: 1px solid #ccc; */
+    float: left;
+    width: 28%;
+}
+
+
+.desc {
+    padding: 5px;
+    direction: rtl;
+    text-align: justify !important; 
+    
+}
+.desc.header{
+    text-align: right !important;
+    font-size: 32px;
+    font-weight: 600;
+}
+.desc.pros{
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    font-weight: 100;
+    text-align: right !important;
+}
+.desc.extra{
+    /* color: red; */
+    font-size: 15px;
+    text-align: justify !important;
+}
+
+ul{
+    color:red;
+}
+li{
     color: black;
 }
-.icon-angle-left, .icon-angle-right{
-font-size: 12px;
-}
 
-#prev{
-    left:3%;
-}
-#next{
-    left:6%; 
-}
-#prev:hover,#next:hover{
-    opacity: 1;
+.image, .caption{
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    align-self: center !important;
+    justify-self: center !important;
+    
 }
 
 
-.menu-icon{
-    height: 17px;
-    padding-left: 5px;
+/* contact */
+.contact{
+    background-color: rgb(255, 255, 255);
+}
+.contact .container{
+    padding: 30px;
+    direction:rtl ;
+}
+#address *{
+    font-family: 'Vazir-FD' !important;
+    font-size: 15px;
+    direction: rtl;
+    margin: auto;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+    #logo{
+        
+        float: left;
+        direction: rtl;
+        position: absolute;
+        margin: 50% auto;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        align-self: center !important;
+        justify-self: center !important;
+    }
+    #logo img{
+        width: 150px;
+    }
+    
+    .carousel,#line-bottom,#menu,#line,#slogan{
+        display: none;
+    }
+    .intro{
+        display: flex !important;
+        flex-direction: column !important;
+        direction: rtl;
+        width: 100%;
+        height: 100%;
+        
+        background: none;
+        
+        border-bottom:  0px ;
+        border-top:  0px ;
+    }
+    #about{
+        /* color: white; */
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        background-color: white;
+        text-align: justify;
+        
+        margin: auto;
+    }
+    #about img{
+        display: none;
+    }
+    .column.image img{
+        height: 110px;
+    }
+    .caption .header{
+        font-size: 18px;
+    }
+    .caption .extra{
+        display: none;
+    }
+
+
+    .contact img{
+        display: none;
+    }
+   
+    .footer-menu{
+        display: none !important;
+    }
+    .contact .container{
+        padding: 0px;
+    }
+    .contact {
+        direction:rtl ;
+    }
+    .contact .breaker{
+        display: none !important;
+    }
+    #address{
+        padding: 10px;
+    }
+    #signature{
+        display: none !important;
+    }
 }

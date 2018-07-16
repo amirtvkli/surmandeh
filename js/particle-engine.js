@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
 
-    NUM_CONFETTI = 100;
+    NUM_CONFETTI = 15;
     
     // COLORS = [[255,223,0], [212,175,55], [207,181,59], [197,179,88], [255,223,0]];
     COLORS = [[131,23,183], [171,21,183], [221,80,214], [197,179,88], [226,0,215]];
@@ -47,7 +47,7 @@ $(document).ready(function(){
     
     window.requestAnimationFrame = (function() {
       return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-        return window.setTimeout(callback, 1000 / 60);
+        return window.setTimeout(callback, 10000 / 60);
       };
     })();
     
@@ -55,7 +55,7 @@ $(document).ready(function(){
       function Confetti() {
         this.style = COLORS[~~range(0, 5)];
         this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
-        this.r = ~~range(1, 4);
+        this.r = ~~range(2, 6);
         this.r2 = 2 * this.r;
         this.replace();
       }
