@@ -220,12 +220,12 @@ h1{
 
 /* carousel */
 .mask{
-    -webkit-mask-image: url(c://Data/Develop/Surmande/img/logoMask.png);
+    -webkit-mask-image: url(http://surmandeh.ir/img/logoMask.png);
     -webkit-mask-mode: match-source;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size:  85%;
     
-    mask-image: url(c://Data/Develop/Surmande/img/logoMask.png);
+    mask-image: url(http://surmandeh.ir/img/logoMask.png);
     mask-mode: match-source;
     mask-repeat: no-repeat;
     mask-size:  90%;
